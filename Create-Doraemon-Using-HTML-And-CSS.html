@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			height:100vh;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			background: black;
+		}
+
+		@keyframes attach{
+			0%{
+				width: 0%;
+				height: 0%;
+			}
+			10%{
+				width: 10%;
+				height: 10%;
+			}
+			20%{
+				width: 20%;
+				height: 20%;
+			}
+			30%{
+				width: 30%;
+				height: 30%;
+			}
+			40%{
+				width: 40%;
+				height: 40%;
+			}
+			50%{
+				width: 50%;
+				height: 50%;
+			}
+			60%{
+				width: 60%;
+				height: 60%;
+			}
+			70%{
+				width: 70%;
+				height: 70%;
+			}
+			80%{
+				width: 80%;
+				height: 80%;
+			}
+			90%{
+				width: 90%;
+				height: 90%;
+			}
+			100%{
+				width: 100%;
+				height: 100%;
+			}
+			
+		}
+
+		@keyframes head{
+			0%{
+				width: 0%;
+				height: 0%;
+			}
+
+			100%{
+				width: 40%;
+				height: 40%;
+			}
+		}
+
+		@keyframes eye1{
+			0%{
+				width: 0%;
+				height: 0%;
+				top: -10%;
+				left: -31%;
+				
+				
+
+			}
+
+			100%{
+				width: 11.5%;
+				height: 20%;
+				top: 28%;
+				left: 26%;
+				
+			}
+		}
+
+		@keyframes eye2{
+			0%{
+				width: 0%;
+				height: 0%;
+				top: -6%;
+				right: -50%;
+				
+
+			}
+
+			100%{
+				width: 11.5%;
+				height: 20%;
+				top: 28%;
+				right: 26%;
+				
+			}
+		}
+
+		
+
+		@keyframes eye1-black{
+		/*	0%{
+				width: 0%;
+				height: 0%;
+				top: 182%;
+				left: -364%;
+			}
+
+			100%{
+				width: 43%;
+				height: 45%;
+				top: 41%;
+				left: 28%;
+			}*/
+
+			0%{
+				
+				transform: scaley(1);
+			}
+
+			50%{
+				
+				transform: scaleY(1.6);
+			}
+
+			100%{
+				transform: scaley(1);
+			}
+		}
+
+		@keyframes eye1-white{
+		/*	0%{
+				width: 0%;
+				height: 0%;
+				top: -292%;
+				left: 49%;
+			}
+
+			100%{
+				width: 30%;
+				height: 44.44%;
+				top: 34%;
+				left: 32%;
+			}*/
+
+			0%{
+				
+				transform: scaley(1);
+			}
+
+			50%{
+				
+				transform: scaleY(1.6);
+			}
+
+			100%{
+				transform: scaley(1);
+			}
+		}
+
+		@keyframes nose{
+			0%{
+				width: 0%;
+				height: 0%;
+				top: -14%;
+				left: 18%;
+			}
+
+			100%{
+				width: 11%;
+				height: 6%;
+				top: 51%;
+				left: 44%;
+			}
+		}
+
+		@keyframes tonge{
+			0%{
+				width: 0%;
+				height: 0%;
+				top: 6%;
+				left: 106%;
+			}
+
+			100%{
+				width: 25%;
+				height: 25%;
+				top: 62%;
+				left: 38%;
+			}
+		}
+
+		@keyframes red-tonge{
+			0%{
+				/*width: 0%;
+				height: 0%;
+				left: 183%;*/
+				transform: scaley(1);
+			}
+
+			50%{
+				/*width: 80%;
+				height: 66%;
+				left: 10%;*/
+				transform: scaleY(1.6);
+			}
+
+			100%{
+				transform: scaley(1);
+			}
+		}
+
+		@keyframes body{
+			0%{
+				width: 0%;
+				height: 0%;
+			}
+
+			100%{
+				width: 52%;
+				height: 55.4%;
+			}
+		}
+
+		@keyframes red-ribben{
+			0%{
+				width: 0%;
+				height: 0%;
+				left: 4%;
+				top: 26%;
+			}
+
+			100%{
+				width: 33.46%;
+				height: 6.87%;
+				left: 33%;
+				top: -5%;
+			}
+		}
+
+		@keyframes yellow-circle{
+			0%{
+				width: 0%;
+				height: 0%;
+				left: 227%;
+			}
+
+			100%{
+				width:20%;
+				height:100%;
+				left: 36%;
+			}
+		}
+		@keyframes stm{
+			0%{
+				width: 0%;
+				height: 0%;
+				top: -73%;
+				left: 84%;
+
+			}
+
+			100%{
+				width: 34%;
+				height: 20%;
+				top: 37%;
+				left: 33%;
+			}
+		}
+
+		@keyframes r-heand{
+			0%{
+				/*width: 0%;
+				height: 0%;*/
+				/*top: -59%;
+				left: -73%;*/
+				transform: rotate(0deg);
+			}
+
+			50%{
+				transform: rotate(50deg);
+			}
+
+			100%{
+				/*width: 76.92%;
+				height: 14.44%;*/
+				/*top: 23%;
+				left: 63%;*/
+				transform: rotate(0deg);
+
+			}
+		}
+
+		@keyframes l-heand{
+			0%{
+				width: 0%;
+				height: 0%;
+				
+
+				top: 95%;
+				left: -73%;
+			}
+
+			100%{
+				width: 57.69%;
+				height: 14.44%;
+				top: 43%;
+				left: -35%;
+			}
+		}
+
+		@keyframes left-leg{
+			0%{
+				width: 0%;
+				height: 0%;
+				left: -107%;
+			}
+
+			100%{
+				width: 55%;
+				height: 15.96%;
+				left: -5%;
+			}
+		}
+
+		@keyframes right-leg{
+			0%{
+				width: 0%;
+				height: 0%;
+				left: 110%;
+			}
+
+			100%{
+				width: 55%;
+				height: 15.96%;
+				right: -5%;
+			}
+		}
+
+		@keyframes center-1{
+			0%{
+				width: 0%;
+				height: 0%;
+				top: 135%;
+			}
+
+			100%{
+				width: 2%;
+				height: 28%;
+				top: 72%;
+			}
+		}
+		.main{
+			width:500px;
+			height:500px;
+			position:relative;
+			
+
+
+		}
+		.main-2{
+			width:100%;
+			height:100%;
+			position: relative;
+			margin: auto;
+			overflow: hidden;
+			top: 0%;
+			animation: attach 5s 0s 1 linear;
+
+
+
+		}
+		.head{
+			width:40%;
+			height:40%;
+			border-radius:50%;
+			background: royalblue;
+			position:relative;
+			left:32%;
+			top:0%;
+			animation: head 5s 0s 1 linear;
+
+		}
+		.eye1{
+			width:11.5%;
+			height:20%;
+			border-radius: 50%;
+			background: white;
+			position: absolute;
+			top:28%;
+			left:26%;
+			animation: eye1 5s 0s 1 linear;
+
+
+		}
+		.eye2{
+			width:11.5%;
+			height:20%;
+			border-radius: 50%;
+			background: white;
+			position: absolute;
+			top:28%;
+			right:26%;
+			animation: eye2 5s 0s 1 linear;
+
+
+		}
+		.eye1_black{
+			width:43%;
+			height:45%;
+			border-radius: 50%;
+			background: black;
+			position: absolute;
+			top: 41%;
+			left: 28%;
+			animation: red-tonge 5s 0s infinite linear;
+
+
+		}
+		.eye2_black{
+			width:43%;
+			height:45%;
+			border-radius: 50%;
+			background: black;
+			position: absolute;
+			top: 41%;
+			right: 28%;
+			animation: red-tonge 5s 0s infinite linear;
+
+
+		}
+		.eye1_white{
+			width:30%;
+			height:44.44%;
+			border-radius: 50%;
+			background: white;
+			position: absolute;
+			top: 34%;
+			left: 32%;
+			animation: red-tonge 5s 0s infinite linear;
+
+		}
+		.eye2_white{
+			width:30%;
+			height:44.44%;
+			border-radius: 50%;
+			background: white;
+			position: absolute;
+			top: 34%;
+			right: 32%;
+			animation: red-tonge 5s 0s infinite linear;
+
+
+		}
+		.nose{
+			width:11%;
+			height:6%;
+			border-radius:50%;
+			background: red;
+			position: absolute;
+			top: 51%;
+			left: 44%;
+			animation: nose 5s 0s 1 linear;
+
+		}
+		.tounge{
+			width:25%;
+			height:25%;
+			border-radius:0px 0px 50px 50px;
+			background: white;
+			position: absolute;
+			top: 62%;
+			left: 38%;
+			overflow: hidden;
+			animation: tonge 5s 0s 1 linear;
+
+		}
+		.red_tounge{
+			width:80%;
+			height:66%;
+			border-radius:0px 0px 50px 50px;
+			background: red;
+			position: absolute;
+			left: 10%;
+			animation: red-tonge 3s 0s infinite; linear;
+
+		}
+		.body{
+			width: 52%;
+			height: 55.4%;
+			background: royalblue;
+			position:relative;
+			animation: body 5s 0s 1 linear;
+
+			bottom: 0%;
+			left: 27%;
+			border-radius: 27% 27% 0% 0%;
+		}
+		.red_ribben{
+			width: 33.46%;
+			height: 6.87%;
+			background: red;
+			position: absolute;
+			border-radius: 23%;
+			left: 33%;
+			top: -5%;
+			animation: red-ribben 5s 0s 1 linear;
+		}
+		.yellow_circle{
+			width:20%;
+			height:100%;
+			background:yellow;
+			border-radius: 50%;
+			position: absolute;
+			left:36%;
+			animation: yellow-circle 5s 0s 1 linear;
+
+		}
+
+		.stm{
+			width: 34%;
+			height: 20%;
+			background: white;
+			border-radius: 0px 0px 90px 90px;
+			position: absolute;
+			top: 37%;
+			left: 33%;
+			animation: stm 5s 0s 1 linear;
+
+
+		}
+
+
+		.right-heand{
+			width: 69.92%;
+			height: 14.44%;
+			background:royalblue;
+			border-radius: 50px;
+			position: absolute;
+			top: 25%;
+			left: 70%;
+			animation: r-heand 5s 0s infinite linear;
+
+		}
+
+		.heand-cirle{
+			width: 20%;
+			height: 100%;
+			border-radius: 50px;
+			background: white;
+			position: absolute;
+			top: 0%;
+			right: 0%;
+
+		}
+
+		.left-heand{
+			width: 57.69%;
+			height: 14.44%;
+			background:royalblue;
+			border-radius:50px;
+			position: absolute;
+			top: 43%;
+			left: -35%;
+			transform: rotate(90deg);
+			animation: l-heand 5s 0s 1 linear;
+
+		}
+		.heand-cirle-l{
+			width: 26%;
+			height: 100%;
+			border-radius: 50%;
+			background: white;
+			position: absolute;
+			bottom: 0%;
+			right: 0%;
+
+		}
+		.left-leg{
+			width: 55%;
+			height: 15.96%;
+			background: white;
+			bottom: -8%;
+			position: absolute;
+			border-radius: 60px;
+			left: -5%;
+			animation: left-leg 5s 0s 1 linear;
+
+
+		}
+		.right-leg{
+			width: 55%;
+			height: 15.96%;
+			background: white;
+			bottom: -8%;
+			position: absolute;
+			right: -5%;
+			border-radius: 60px;
+			animation: right-leg 5 s 0s 1 linear;
+
+
+		}
+
+		.center-line{
+			width: 2%;
+			height: 28%;
+			background: white;
+			position: absolute;
+			top: 72%;
+			left: 49%;
+			animation: center-1 5s 0s 1 linear;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="main-2">
+			<div class="head">
+				<div class="eye1">
+					<div class="eye1_black">
+						<div class="eye1_white"></div>
+
+					</div>
+				</div>
+				<div class="eye2">
+					<div class="eye2_black">
+						<div class="eye2_white"></div>
+
+					</div>
+
+				</div>
+				<div class="nose"></div>
+				<div class="tounge">
+					<div class="red_tounge"></div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="red_ribben">
+					<div class="yellow_circle"></div>
+				</div>
+				<div class="stm"></div>
+
+				<div class="right-heand">
+					<div class="heand-cirle"></div>
+				</div>
+
+				<div class="left-heand">
+					<div class="heand-cirle-l"></div>
+
+				</div>
+
+				<div class="left-leg"></div>
+				<div class="right-leg"></div>
+				<div class="center-line"></div>
+
+			</div>
+
+
+		</div>
+	</div>
+</body>
+</html>
